@@ -2,6 +2,13 @@ import meshtastic.serial_interface
 from pubsub import pub
 import time
 
+"""
+
+Ping.py is a small tool that connects with your Meshtastic node and replies to 'ping' texts.
+It doesn't care about capitals, so PiNg, PIng and piNG will all be replied with a custom message.
+
+"""
+
 # You can change the message and interval here
 PING_TEXT = "Received your ping, here's my PONG!"
 
@@ -15,6 +22,7 @@ interface = meshtastic.serial_interface.SerialInterface()
 def onReceive(packet, interface): # called when a packet arrives
 
     """
+    Example data
     {
         'from': 420101xxxx, 
         'to': 208629xxxx, 
