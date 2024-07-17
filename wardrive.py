@@ -2,6 +2,12 @@ import meshtastic.serial_interface
 from pubsub import pub
 import time
 
+"""
+
+Wardrive.py is a small tool that sends a message every 30 seconds to discover new nodes.
+
+"""
+
 # You can change the message and interval here
 WARDRIVE_TEXT = "(autom. bericht) Hallo! Ik ben aan het rondrijden en op zoek naar nodes"
 WARDRIVE_INTERVAL = 30
